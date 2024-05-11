@@ -5,17 +5,15 @@
   </div> 
 </template>
 <script>
-import {nanoid} from 'nanoid' ;
-
   export default {
     props: {
       label: { required: true, type: String },
-      done: { default: false, type: Boolean }
+      done: { default: false, type: Boolean },
+      id: { required: true, type: Boolean,},
     },
     data() {
       return {
         isDone: this.done,
-        id: 'todo-' + nanoid(),
       };
     },
   };
