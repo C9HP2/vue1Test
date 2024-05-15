@@ -21,14 +21,14 @@ export default {
   data() {
     return {
       ToDoItems: [
-        { label: "Learn Vue", done: false},
-        { label: "Create a Vue project with the CLI", done: true},
-        { label: "Have fun", done: true},
-        { label: "Create a to-do list", done: false},
-        { label: "MDN 3 pages learned", done: false},
-        { label: "MDN more than half learned", done: false},
-        { label: "MDN Learned all", done: false},
-        { label: "Start another practice", done: false},
+        { label: "Learn Vue", done: false, id: 'todo-' + nanoid()},
+        { label: "Create a Vue project with the CLI", done: true, id: 'todo-' + nanoid()},
+        { label: "Have fun", done: true, id: 'todo-' + nanoid()},
+        { label: "Create a to-do list", done: false, id: 'todo-' + nanoid()},
+        { label: "MDN 3 pages learned", done: false, id: 'todo-' + nanoid()},
+        { label: "MDN more than half learned", done: false, id: 'todo-' + nanoid()},
+        { label: "MDN Learned all", done: false, id: 'todo-' + nanoid()},
+        { label: "Start another practice", done: false, id: 'todo-' + nanoid()},
       ],
     };
   },

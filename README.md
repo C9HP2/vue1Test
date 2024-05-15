@@ -1,7 +1,14 @@
-# Vue 3 + Vite
+# Second Vue project
+vue2 project, not actually my second vue project but anyway ...
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+## Following MDN web docs
+starting with MDN, creating a simple To-Do List. after creating this, probable i'll go for creating my **TicTacToe project** like on react documentation
+these are my goals for and after this project. 
+### Goals :
+[x] Learning Vue<br>
+[x] Create a Vue project with the CLI <br>
+[x] Create a to-do list <br>
+[ ] MDN 3 pages learned <br>
+[ ] MDN more than half learned <br>
+[ ] MDN Learned all <br>
+[] **Start TicTacToe project**
