@@ -1,10 +1,13 @@
 <template>
   <div id='app'>
     <h1>To-do List</h1>
-    <ToDoForm></ToDoForm>
+    <ToDoForm @todo-added="addToDo"></ToDoForm>
     <ul>
       <li v-for="item in ToDoItems" :key="item.id">
-        <ToDoItem :label="item.label" :done="item.done" :id="item.id"></ToDoItem>
+        <ToDoItem
+          :label="item.label" :done="item.done"
+          :id="item.id"
+        ></ToDoItem>
       </li>
     </ul>
   </div>
@@ -17,7 +20,6 @@ import ToDoForm from "./components/ToDoForm.vue";
 export default {
   name: 'App',
   components: {ToDoItem, ToDoForm,},
-
   data() {
     return {
       ToDoItems: [
@@ -31,6 +33,12 @@ export default {
         { label: "Start another practice", done: false, id: 'todo-' + nanoid()},
       ],
     };
+  },
+  methods: {
+    addToDo(todoLabel) {
+      this.ToDoItems.push({id: "todo-" + nanoid(), label: todoLabel, done: false});
+      console.log('ToDo Added:', todoLabel);
+    },
   },
 };
 </script>

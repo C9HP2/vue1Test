@@ -1,9 +1,9 @@
 <template>
 <form @submit.prevent="onSubmit">
-  <label for="new-todo-input">THE LABEL</label>
+  <label for="new-todo-input">What needs to be done?</label>
   <input type="text" id="new-todo-input" 
   name="new-todo" autocomplete="off" 
-  v-model="label" />
+  v-model.trim.lazy="label" />
   <button type="submit">Add</button>
 </form>
 </template>
@@ -16,7 +16,9 @@ export default {
   },
   methods: {
     onSubmit() {
-      console.log("THE LABEL VALUE: ", this.label)
+      if (this.label === "" | this.label) {return;} // empty todo label not allowed
+      this.$emit("todo-added", this.label);
+      this.label = "";
     }
   }
 };
